@@ -10,7 +10,7 @@ A-1. Arudino</br>
 A-2. SIM5360</br>
 A-3. battery</br>
 
-![image](https://github.com/sony791210/arudino_3g_raspberry/tree/master/picture/SIM.jpg)
+![image](https://github.com/sony791210/arudino_3g_raspberry/raw/master/picture/SIM.jpg)
 
 B-1. Raspberry pi</br>
 B-2. Router</br>
