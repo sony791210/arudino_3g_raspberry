@@ -49,44 +49,44 @@ use 80 port to send information</br>
 
 # raspberry 
 follow</br>
-https://howtoraspberrypi.com/how-to-install-web-server-raspberry-pi-lamp/
-u need to install lamp
-linux 
-apache
-mysql
-php
+https://howtoraspberrypi.com/how-to-install-web-server-raspberry-pi-lamp/</br>
+u need to install lamp</br>
+linux </br>
+apache</br>
+mysql</br>
+php</br>
 
 ## star with raspberry pi 
 ### apache2
-//install apache2
-sudo apt install apache2
-//to change user ,pi is user name u can change
-sudo chown -R pi:www-data /var/www/html/
-sudo chmod -R 770 /var/www/html
+//install apache2</br>
+sudo apt install apache2</br>
+//to change user ,pi is user name u can change</br>
+sudo chown -R pi:www-data /var/www/html/</br>
+sudo chmod -R 770 /var/www/html</br>
 ###  php
-//install php
-sudo apt install php php-mbstring
+//install php</br>
+sudo apt install php php-mbstring</br>
 
 ### Mysql
-//install mysql
-sudo apt install mysql-server php-mysql
-// into mysql 
-sudo mysql --user=root
-//then  very imporant
-DROP USER 'root'@'localhost';
-CREATE USER 'root'@'localhost' IDENTIFIED BY 'password';
-GRANT ALL PRIVILEGES ON *.* TO 'root'@'localhost';
+//install mysql</br>
+sudo apt install mysql-server php-mysql</br>
+// into mysql </br>
+sudo mysql --user=root</br>
+//then  very imporant</br>
+DROP USER 'root'@'localhost';</br>
+CREATE USER 'root'@'localhost' IDENTIFIED BY 'password';</br>
+GRANT ALL PRIVILEGES ON *.* TO 'root'@'localhost';</br>
 
 ### phpmyadmin
-//install phpmyadmin to look data
-sudo apt install phpmyadmin
-//link the file to www
-sudo ln -s /usr/share/phpmyadmin /var/www/html/phpmyadmin
+//install phpmyadmin to look data</br>
+sudo apt install phpmyadmin</br>
+//link the file to www</br>
+sudo ln -s /usr/share/phpmyadmin /var/www/html/phpmyadmin</br>
 
 
 ## how to get data
-//in raspberry  /var/www/html/ 
-create file name
+//in raspberry  /var/www/html/ </br>
+create file name</br>
 
 
 
