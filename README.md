@@ -15,11 +15,90 @@ A-3. battery</br>
 B-1. Raspberry pi</br>
 B-2. Router</br>
 
-## First Arduino
+# First Arduino
 準備 SIM5360模組板</br>
 將Aruino 程式放入，一共有4組code (A1_Setup,A2_Loop,SIM5360_Lib,X56360_test)，其資料夾名稱為X5360_test</br>
+If arduino can't sent data ,use the battery for SIM module</br> 
+And u need the antenna to sent</br>
+If all fail , to check the delay time use slowly </br>
+如果跑不動記得用電池驅動SIM模組</br>
+記得要裝天線</br>
+如果真的還跑不動,檢查延遲時間增加多一點,看看是否能跑</br>
+### x5630_test
+//arduino RXpin 2 compare SIM TX</br>
+//arduino Txpin 3 compare SIM RX</br>
 
 
+//IP is ur IP or DDNS ;</br>
+String uploadServer = "IP" ;</br>
+
+//test.php?aid=</br>
+//在raspberry裡面有test.php的在接收資料，用aid=??在接收 </br>
+String uploadPage = "/dbtest.php?aid=" ;</br>
+
+
+### A2_Loop
+//read data from Serial </br>
+u can input any data to test send</br>
+
+### SIM5360_Lib
+use 80 port to send information</br>
+
+
+
+
+# raspberry 
+follow</br>
+https://howtoraspberrypi.com/how-to-install-web-server-raspberry-pi-lamp/
+u need to install lamp
+linux 
+apache
+mysql
+php
+
+## star with raspberry pi 
+### apache2
+//install apache2
+sudo apt install apache2
+//to change user ,pi is user name u can change
+sudo chown -R pi:www-data /var/www/html/
+sudo chmod -R 770 /var/www/html
+###  php
+//install php
+sudo apt install php php-mbstring
+
+### Mysql
+//install mysql
+sudo apt install mysql-server php-mysql
+// into mysql 
+sudo mysql --user=root
+//then  very imporant
+DROP USER 'root'@'localhost';
+CREATE USER 'root'@'localhost' IDENTIFIED BY 'password';
+GRANT ALL PRIVILEGES ON *.* TO 'root'@'localhost';
+
+### phpmyadmin
+//install phpmyadmin to look data
+sudo apt install phpmyadmin
+//link the file to www
+sudo ln -s /usr/share/phpmyadmin /var/www/html/phpmyadmin
+
+
+## how to get data
+//in raspberry  /var/www/html/ 
+create file name
+
+
+
+
+
+
+
+# Router 路由器
+To check ur router ,tcp 80 port is open for ur raspberry</br>
+or ur can use DMZ ,but it is't a good idea</br>
+確認你的80port對應你的raspberry</br>
+如果不會用的話,可以用DMZ去raspberry,但是不建議使用</br>
 
 
 
